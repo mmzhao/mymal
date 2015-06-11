@@ -1,0 +1,79 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our version of mal
+
+    // Wrapper
+    #wrapper
+
+        // ANIME INFO
+        #animeInfo
+            h2 Anime Info
+            p
+                strong Title:
+                |  <span id='AnimeInfoTitle'></span>
+                br
+                strong Score:
+                |  <span id='AnimeInfoScore'></span>
+                br
+                strong Rating:
+                |  <span id='AnimeInfoRating'></span>
+                br
+                strong Rank:
+                |  <span id='AnimeInfoRank'></span>
+                br
+                strong MAL:
+                |  <span id='AnimeMalLink'></span>
+        // /ANIME INFO
+
+        // EDIT ANIME
+        h2 Edit Anime
+        #editAnime
+            fieldset
+                input#inputAnimeTitle(type='text',name='title')
+                input#inputAnimeScore(type='number',step='any',name='score')
+                input#inputAnimeRating(type='number',step='any',name='rating')
+                input#inputAnimeRank(type='number',name='rank')
+                br
+                strong MAL:
+                |  <span id='AnimeMalLink'></span>
+                br
+                button#btnEditAnime Edit Anime
+        // /ADD ANIME
+
+        // ANIME LIST
+        h2 Animelist
+        #animelist
+            table
+                thead
+                    th Title
+                    th Score
+                    th Rating
+                    th Rank
+                    th Delete?
+                tbody
+        // /ANIME LIST
+
+        // ADD ANIME
+        h2 Add Anime
+        #addAnime
+            fieldset
+                input#inputAnimeTitle(type='text',placeholder='Anime Title',name='title')
+                input#inputAnimeScore(type='number',step='any',placeholder='Anime Score',name='score')
+                input#inputAnimeRating(type='number',step='any',placeholder='Anime Rating',name='rating')
+                input#inputAnimeRank(type='number',placeholder='Anime Rank',name='rank')
+                br
+                button#btnAddAnime Add Anime
+        // /ADD ANIME
+
+        // IMPORT MAL ANIMELIST
+        h2 Import MAL Animelist
+        #importAnimelist
+            fieldset
+                input#inputAnimelistUrl(type='text',placeholder='MAL Animelist Url',name='url')
+                br
+                button#btnImportAnimelist Import Animelist
+        // /IMPORT MAL ANIMELIST
+
+    // /WRAPPER

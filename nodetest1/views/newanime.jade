@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= title
+    form#formAddUser(name="addanime",method="post",action="/addanime")
+        input#inputAnimeTitle(type="text", placeholder="anime title", name="title")
+        input#inputAnimeScore(type="number", step="any", placeholder="anime score", name="score")
+        button#btnSubmit(type="submit") submit

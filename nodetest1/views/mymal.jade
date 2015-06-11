@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1.
+        My Version of Mal
+    ul
+        each anime, i in mymal
+            li
+                p= anime.score + " " + anime.title
